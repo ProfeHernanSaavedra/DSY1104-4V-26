@@ -53,3 +53,78 @@ footer{
     text-align: center;
     background-color: #2f241f;
 }
+
+.productos {
+    display: flex;
+    gap: 20px;
+}
+
+.tarjeta {
+    flex: 1;
+    margin: 0;
+}
+
+.tarjeta:hover {
+    border-color: #9b6047;
+}
+
+.precio {
+    color: #9b3d22;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hero{
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 48px;
+    border-radius: 16px;
+    background-color: #ead8c8;
+}
+
+.hero h2 {
+    max-width: 600px;
+    margin: 8px 0 16px;
+    font-size: 48px;
+}
+
+.etiqueta {
+    color: #8a4f35;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: #8a4f35;
+    text-decoration: none;
+}
+
+/*responsivo*/
+@media (max-width: 700px) {
+    header {
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        min-width: 320px;
+        padding: 28px;
+    }
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .productos {
+        flex-direction: column;
+    }
+}
