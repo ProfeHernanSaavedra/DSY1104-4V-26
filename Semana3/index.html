@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Café</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="js/app.js" defer></script>
+
+</head>
+<body>
+    
+    <!--Comentarios-->
+    <!-- etiquetas semánticas-->
+     <!--<header>
+        <nav></nav>
+     </header>
+
+     <main>
+        <section></section>
+        <section></section>
+        <section></section>
+        <article></article>
+     </main>
+
+     <footer></footer>
+     <div></div>
+    -->
+
+    <header>
+        <h1 id="titulo-sitio" >Ventas de Café</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="hero">
+            <div>
+                <p class="etiqueta">Café de especialidad</p>
+                <h2>Un buen café cambia tu día</h2>
+                <p>Disfruta café de especialidad y productos preparados cada mañana.</p>
+                <a class="boton" href="#productos">Ver Productos</a>
+                <button id="boton-bienvenida" class="btn btn-primary" >
+                    Mostrar Bienvenida
+                </button>
+                <p id="mensaje-bienvenida" class="mt-3" ></p>
+
+            </div>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestros productos</h2>
+            <div class="productos">
+                <article class="tarjeta">
+                    <h3>Café latte</h3>
+                    <p>Espresso acompañado de leche cremosa.</p>
+                    <p class="precio">$2.900</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Capuchino</h3>
+                    <p>Café espresso,leche y espuma</p>
+                    <p class="precio">$3.200</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <p>Venta de Café - Viña del Mar</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
