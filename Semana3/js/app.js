@@ -42,14 +42,18 @@ botonPromocion.addEventListener("click",function(){
 //contador de productos
 const botonesAgregar = document.querySelectorAll(".boton-agregar");
 const contador = document.getElementById("contador-productos");
-
-let cantidadProductos2 = 0;
+const ultimoProducto = document.getElementById("ultimo-producto");
+let cantProductos = 0;
 
 botonesAgregar.forEach(function(boton){
     boton.addEventListener("click",function(){
-        cantidadProductos2 =cantidadProductos2+1;
+        const nombreProducto =boton.dataset.producto;
 
-        contador.textContent=cantidadProductos2;
+        cantProductos =cantProductos+1;
+
+        contador.textContent=cantProductos;
+
+        ultimoProducto.textContent =nombreProducto + " fue agregado correctamente";
 
     });
 });
