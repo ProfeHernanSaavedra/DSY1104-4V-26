@@ -1,5 +1,5 @@
 console.log("Hola soy JavaScript");
-//let cantidadProductos = 0;
+let cantidadProductos = 0;
 cantidadProductos = cantidadProductos + 1;
 console.log(cantidadProductos);
 const nombreCafeteria = "Café Duoc";
@@ -43,13 +43,13 @@ botonPromocion.addEventListener("click",function(){
 const botonesAgregar = document.querySelectorAll(".boton-agregar");
 const contador = document.getElementById("contador-productos");
 
-let cantidadProductos = 0;
+let cantidadProductos2 = 0;
 
 botonesAgregar.forEach(function(boton){
     boton.addEventListener("click",function(){
-        cantidadProductos =cantidadProductos+1;
+        cantidadProductos2 =cantidadProductos2+1;
 
-        contador.textContent=cantidadProductos;
+        contador.textContent=cantidadProductos2;
 
     });
 });
