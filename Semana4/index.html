@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Café</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="js/app.js" defer></script>
+
+</head>
+<body>
+    
+    <!--Comentarios-->
+    <!-- etiquetas semánticas-->
+     <!--<header>
+        <nav></nav>
+     </header>
+
+     <main>
+        <section></section>
+        <section></section>
+        <section></section>
+        <article></article>
+     </main>
+
+     <footer></footer>
+     <div></div>
+    -->
+
+    <header>
+        <h1 id="titulo-sitio" >Ventas de Café</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="hero">
+            <div>
+                <p class="etiqueta">Café de especialidad</p>
+                <h2>Un buen café cambia tu día</h2>
+                <p>Disfruta café de especialidad y productos preparados cada mañana.</p>
+                <a class="boton" href="#productos">Ver Productos</a>
+                <button id="boton-bienvenida" class="btn btn-primary" >
+                    Mostrar Bienvenida
+                </button>
+                <p id="mensaje-bienvenida" class="mt-3" ></p>
+
+            </div>
+        </section>
+
+        <section class="container py-4" >
+            <button id="boton-promocion" class="btn btn-warning" >
+                Mostrar Promoción
+            </button>
+
+            <div id="promocion" class="alert alert-success mt-3 d-none" >
+                Compra dos cafés y llevate una galleta gratis.
+
+            </div>
+        </section>
+
+
+        <section id="productos">
+            <h2>Nuestros productos</h2>
+            <div class="text-black" >
+                Productos Seleccionados:
+                <span id="contador-productos" class="badge bg-success">0</span>
+                <p id="ultimo-producto" class="mt-3 text-success fw-bold"></p>
+            </div>
+            <div class="productos">
+                <article class="tarjeta">
+                    <h3>Café latte</h3>
+                    <p>Espresso acompañado de leche cremosa.</p>
+                    <p class="precio">$2.900</p>
+
+                    <button 
+                        class="btn btn-outline-primary boton-agregar" 
+                        data-producto = "Café Latte"
+                    >
+                        Agregar
+                    </button>
+
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Capuchino</h3>
+                    <p>Café espresso,leche y espuma</p>
+                    <p class="precio">$3.200</p>
+                    <button 
+                        class="btn btn-outline-primary boton-agregar " 
+                        data-producto="Capuchino"
+                    >
+                        Agregar
+                    </button>
+
+                </article>
+            </div>
+        </section>
+
+        <!--FORMULARIOS-->
+        <section id="reservas" class="bg-light py-5" >
+            <div class="container" >
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6" >
+                        <h2 class="text-center mb-4">
+                            Reserva una mesa 
+                        </h2>
+
+                        <form action="" method=""
+                            id="formulario-reserva"
+                            class="border rounded p-4 shadow bg-white"
+                        >
+                        <div class="mb-3" >
+                            <label for="nombre" class="form-label"  >
+                                Nombre
+                            </label>
+                            <input 
+                                type="text"
+                                id="nombre"
+                                class="form-control"
+                                placeholder="Ingrese su nombre"
+                            >
+                        </div>
+                        <div class="mb-3" >
+                            <label for="correo" class="form-label"  >
+                                Correo electrónico
+                            </label>
+                            <input 
+                                type="email"
+                                id="correo"
+                                class="form-control"
+                                placeholder="nombre@correo.cl"
+                            >
+                        </div>
+
+                        <div class="mb-3" >
+                            <label for="personas" class="form-label"  >
+                                Cantidad de Personas
+                            </label>
+                            <input 
+                                type="number"
+                                id="personas"
+                                class="form-control"
+                                min="1"
+                                max="10"
+                                value="1"
+                            >
+                        </div>
+
+                        <div class="mb-3" >
+                            <label for="fecha" class="form-label"  >
+                                Fecha de la reserva
+                            </label>
+                            <input 
+                                type="date"
+                                id="fecha"
+                                class="form-control"
+                                
+                            >
+                        </div>
+
+                        <div class="mb-3" >
+                            <label for="horario" class="form-label"  >
+                                Horario
+                            </label>
+                            <select name="" id="horario" class="form-select">
+                                <option value="">
+                                    Seleccione Horario
+                                </option>
+                                <option value="10:00">
+                                    10:00 horas
+                                </option>
+                                <option value="12:00">
+                                    12:00 horas
+                                </option>
+                                <option value="16:00">
+                                    16:00 horas
+                                </option>
+                                <option value="18:00">
+                                    18:00 horas
+                                </option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100" >
+                            Reservar mesa
+                        </button>
+                        </form>
+
+                        <div
+                            id="mensaje-resultado"
+                            class="mt-4"
+                            role="alert"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <p>Venta de Café - Viña del Mar</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

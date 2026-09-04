@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #2f241f;
+    background-color: #fffaf4;
+}
+
+header {
+    padding: 20px;
+    color: white;
+    background-color: #4b2e22;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+   margin-right: 16px;
+   color: white; 
+   text-decoration: none;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+section {
+    margin-bottom: 48px;
+}
+
+article {
+    margin-bottom: 16px;
+    padding: 20px;
+    border: 1px solid #d8c4b8;
+    border-radius: 10px;
+    background-color: white;
+}
+
+footer{
+    padding: 24px;
+    color: white;
+    text-align: center;
+    background-color: #2f241f;
+}
+
+.productos {
+    display: flex;
+    gap: 20px;
+}
+
+.tarjeta {
+    flex: 1;
+    margin: 0;
+}
+
+.tarjeta:hover {
+    border-color: #9b6047;
+}
+
+.precio {
+    color: #9b3d22;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hero{
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 48px;
+    border-radius: 16px;
+    background-color: #ead8c8;
+}
+
+.hero h2 {
+    max-width: 600px;
+    margin: 8px 0 16px;
+    font-size: 48px;
+}
+
+.etiqueta {
+    color: #8a4f35;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: #8a4f35;
+    text-decoration: none;
+}
+
+/*responsivo*/
+@media (max-width: 700px) {
+    header {
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        min-width: 320px;
+        padding: 28px;
+    }
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .productos {
+        flex-direction: column;
+    }
+}
