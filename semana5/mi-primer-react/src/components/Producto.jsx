@@ -1,9 +1,11 @@
+import Button from 'react-bootstrap/Button'
+
 function Producto(props){
     return (
         <div>
             <h3>{props.nombre}</h3>
             <p>Precio: ${props.precio}</p>
-            <button>Comprar</button>
+            <Button variant='danger' >Comprar</Button>
         </div>
     )
 }
