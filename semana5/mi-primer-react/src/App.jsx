@@ -1,41 +1,26 @@
-import Saludo from "./components/Saludo"
-import Producto from "./components/Producto"
-import Contador from "./components/Contador"
-import Button from 'react-bootstrap/Button'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-const nombre = "Hernán"
-const edad = 40
-
-function App (){
+import DetalleProducto from './pages/DetalleProducto'
+import Navbar from './components/Navbar'
+import Inicio from './pages/Inicio'
+import Productos from './pages/Productos'
+import Login from './pages/Login'
+function App() {
   return (
-    <div>
-      <h1>Mi primera Aplicación en React</h1>
-      <p>Desarrollo FullStack II</p>
-      <h3>Hola {nombre}</h3>
-      <h3>Edad: {edad}</h3>
-      <h4>El próximo año tendras {edad + 1}</h4>
-      <Button variant="primary" >Ingresar</Button>
-      <hr></hr>
-      <Saludo />
-      <hr />
-      <h2>Venta de productos</h2>
-      <Producto 
-        nombre = "Notebool DELL"
-        precio = "790.990"
-      />
-      <Producto 
-        nombre = "Monitor AOC"
-        precio = "180.990"
-      />
-      <Producto 
-        nombre = "Mouse Genius"
-        precio = "1.990"
-      />
+    <BrowserRouter>
 
-      <hr />
-      <Contador />
-    </div>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/producto/:id"
+          element={<DetalleProducto />}
+        />
+      </Routes>
+    </BrowserRouter>
   )
-
 }
 export default App
