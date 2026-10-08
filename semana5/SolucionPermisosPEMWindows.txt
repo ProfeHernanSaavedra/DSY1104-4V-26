@@ -1,0 +1,5 @@
+icacls "userReactVite.pem" /reset
+
+icacls "userReactVite.pem" /grant:r "$($env:USERNAME):(R)"
+
+icacls "userReactVite.pem" /inheritance:r
